@@ -15,3 +15,7 @@ png("plot1.png", width = 480, height = 480)
 barplot(emmissions, xlab = "Year", ylab = "Total Emissions PM2.5 Tons", 
         col = c("RED","BLUE","GREEN","YELLOW"), main = "Total PM2.5 emission")
 dev.off()
+
+#another method
+#totalEmissionByYear <- aggregate(Emissions ~ year, NEI, sum)
+#plot(totalEmissionByYear$year, totalEmissionByYear$Emissions, type = "b", xlab ="Year", ylab ="PM2.5 Emissions (tons)", main = "Total PM2.5 Emission in the United States")

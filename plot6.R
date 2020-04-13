@@ -22,3 +22,12 @@ png("plot6.png", width = 480, height = 480)
 ggplot(data = data1, aes(x=year, y=Emissions, color = city)) + geom_line() 
 
 dev.off()
+
+#Another method
+#g <- ggplot(bothAGG, aes(factor(year), Emissions))
+#p <- g + xlab("Year") + ylab("PM2.5 Emissions (tons)") + facet_grid(. ~ fips) + geom_bar(stat = "identity") + ggtitle("PM2.5 Emission from Motor Vehicles in Baltimore City and Los Angeles")
+
+#labels <- c("24510" = "Baltimore", "06037" = "Los Angeles")
+#plot6 = ggplot(Balt.LA.Motveh, aes(x=as.factor(year), y=log10(Emissions), group = year))
+#plot6 = plot6 + geom_boxplot() + facet_grid(.~fips, labeller = labeller(fips = labels)) + labs(title = "PM2.5 Emissions of motor vehicle-related sources in Baltimore and Los Angeles", x = "Year")
+

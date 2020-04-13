@@ -14,3 +14,9 @@ png("plot5.png", width = 480, height = 480)
 barplot(emmissions, xlab = "Year", ylab = "Total Emissions PM2.5 Tons From vehicle", 
         col = c("RED","BLUE","GREEN","YELLOW"), main = "Total PM2.5 emission From vehicle")
 dev.off()
+
+
+#Another Method
+#plot5 = qplot(as.factor(year), Emissions, data = Baltmotveh.NEI, log = "y",
+#geom = "boxplot", aes(group = year), xlab = "Year", ylab = "log10(Emissions)",
+#main = "PM2.5 Emissions of motor vehicle-related sources in Baltimore")
